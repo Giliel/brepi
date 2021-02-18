@@ -1,15 +1,18 @@
 import React from 'react';
+import './Beer.css';
 
 const Beer = (props) => {
   return (
-    <div>
-      <div>
-        <img src={props.image_url} alt={`image of ${props.name}`} />
-      </div>
-      <div>
+    <div class='beerTile'>
+      <div class='beer'>
+        <img src={props.image_url} class='beerImage' alt={`image of ${props.name}`} />
+        <p class='beerDescr'>
         {props.description}
+        </p>
       </div>
-      {props.name}
+      <div class='beerName'>
+        {props.name}
+      </div>
     </div>
   )
 }
